@@ -25,19 +25,17 @@ class Game {
     required this.freetogameProfileUrl,
   });
 
-  factory Game.fromJson(Map<String, dynamic> json) {
-    return Game(
-      id: json['id'],
-      title: json['title'],
-      thumbnail: json['thumbnail'],
-      shortDescription: json['short_description'],
-      gameUrl: json['game_url'],
-      genre: json['genre'],
-      platform: json['platform'],
-      publisher: json['publisher'],
-      developer: json['developer'],
-      releaseDate: json['release_date'],
-      freetogameProfileUrl: json['freetogame_profile_url'],
-    );
-  }
+   Game.fromJson(Map<String, dynamic> json)
+    : id = json['id'],
+      title = json['title'],
+      thumbnail = json['thumbnail'],
+      shortDescription = json['short_description'],
+      gameUrl = json['game_url'],
+      genre = json['genre'],
+      platform = json['platform'],
+      publisher = json['publisher'],
+      developer = json['developer'],
+      releaseDate = json['release_date'],
+      freetogameProfileUrl = json['freetogame_profile_url'];
+
 }
